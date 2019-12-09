@@ -530,14 +530,14 @@ const useSVGDom = (obj)=> {
         )
     },1000)
     mainHead.on("mousemove",()=>{
-        const moveX = this.event.clientX*0.1;
-        const moveY = this.event.clientY*0.08;
+        const moveX = this.event.offsetX*0.1;
+        const moveY = this.event.offsetY*0.08;
         eyesInside
         .transition()
         .duration(100)
         .attrs({
-            "cx":(d)=> 423+(d.insideMove*1)+moveX,
-            "cy":50+moveY,
+            "cx":(d)=> 432+(d.insideMove*1)+moveX,
+            "cy":107+moveY,
         })
     });
     mainHead.on("mouseout",()=>{
